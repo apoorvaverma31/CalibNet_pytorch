@@ -4,3 +4,6 @@ pykitti
 PyYAML
 scipy
 tqdm
+opencv-python
+imageio
+neuralnet-pytorch

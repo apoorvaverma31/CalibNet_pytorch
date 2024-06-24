@@ -3,7 +3,8 @@ import torch.nn.functional as F
 from torch import nn
 from math import sqrt
 from utils import so3
-from losses.chamfer_loss import chamfer_distance
+# from losses.chamfer_loss import chamfer_distance
+from neuralnet_pytorch.metrics import chamfer_loss as chamfer_distance
 from scipy.spatial.transform import Rotation
 import numpy as np
     

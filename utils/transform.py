@@ -173,7 +173,7 @@ def pcd_projection(img_shape:tuple,intran:np.ndarray,pcd:np.ndarray,range:np.nda
     H,W = img_shape
     proj_pcd = intran @ pcd
     u,v,w = proj_pcd[0,:], proj_pcd[1,:], proj_pcd[2,:]
-    u = np.asarray(u/w,dtype=np.int32)
+    u = np.asarray(u/w,dtype=np.int32) # runtime warning
     v = np.asarray(v/w,dtype=np.int32)
     rev = (0<=u)*(u<W)*(0<=v)*(v<H)*(w>0)
     u = u[rev]
